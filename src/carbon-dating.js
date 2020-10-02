@@ -13,7 +13,6 @@ dateSample = sampleActivity => {
 
     const t = Math.log(MODERN_ACTIVITY / N0) / k
 
-    //console.log(t)
     return Math.ceil(t)
 }
 

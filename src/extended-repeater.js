@@ -14,10 +14,6 @@ const repeater = (string, options) => {
   const additionRepeatTimes = options.hasOwnProperty('additionRepeatTimes') ? options.additionRepeatTimes : 0
   const additionSeparator = options.hasOwnProperty('additionSeparator') ? toString(options.additionSeparator) : '|'
 
-console.log('str', string, 'opt', options, 'rt', repeatTimes, 'ad', addition, 'ad', options.addition, 'art', additionRepeatTimes, 'asep', additionSeparator, '(sep:'+separator+'-'+options.separator+')', Array(repeatTimes)
-.fill(str + Array(additionRepeatTimes).fill(addition).join(additionSeparator))
-.join(separator))
-
   return Array(repeatTimes).fill(str + Array(additionRepeatTimes).fill(addition).join(additionSeparator))
     .join(separator)
 }

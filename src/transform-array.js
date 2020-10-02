@@ -25,14 +25,7 @@ const transform = array => {
     }
   }
   const result = map.reduce((result, value, index) => result.concat(Array(value > 0 ? value : 0).fill(array[index])), [])
-  //console.log(result)
   return result
 }
 
 module.exports = transform
-
-// console.log(transform([1, 2, 3, '--double-next', 4, 5])) // ` => `[1, 2, 3, 4, 4, 5]
-// console.log(transform([1, 2, 3, '--discard-next', 1337, '--double-prev', 4, 5]))//[1, 2, 3, 4, 5]
-// console.log(transform([1, 2, 3, '--double-next', 1337, '--double-prev', 4, 5]))//[1, 2, 3, 1337, 1337, 1337, 4, 5]
-// console.log(transform([1, 2, 3, '--discard-next', 1337, '--discard-prev', 4, 5]))//[1, 2, 3, 4, 5]
-// console.log(transform([1, 2, 3, '--double-next', 1337, '--discard-prev', 4, 5]))//[1, 2, 3, 1337, 4, 5]

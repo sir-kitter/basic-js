@@ -10,5 +10,3 @@ const createDreamTeam = members => {
 }
 
 module.exports = createDreamTeam
-
-//console.log(createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max']))//` => `'ADMM'`
